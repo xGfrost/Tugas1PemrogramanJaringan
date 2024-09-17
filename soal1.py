@@ -1,15 +1,19 @@
 def seleksi_kriteria(nilai):
-    if nilai >= 88:
-        return "A"
-    elif nilai >= 77:
-        return "B"
-    elif nilai >= 60:
-        return "C"
-    elif nilai >= 45:
-        return "D"
+    if nilai >= 81:
+        return "A", "Istimewa"
+    elif nilai >= 71:
+        return "AB", "Sangat baik"
+    elif nilai >= 66:
+        return "B", "Baik"
+    elif nilai >= 61:
+        return "BC", "Cukup baik"
+    elif nilai >= 56:
+        return "C", "Cukup"
+    elif nilai >= 41:
+        return "D", "Kurang"
     else:
-        return "E"
+        return "E", "Sangat kurang"
 
 nilai = int(input("Masukkan nilai: "))
-kriteria = seleksi_kriteria(nilai)
-print(f"Kriteria nilai: {kriteria}")
+kriteria, kategori = seleksi_kriteria(nilai)
+print(f"Kriteria nilai: {kriteria}, Kategori: {kategori}")
